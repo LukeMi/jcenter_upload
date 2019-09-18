@@ -1,0 +1,43 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+// Maven Group ID for the artifact
+group = "com.lukemi"
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                groupId "com.lukemi"
+                artifactId 'jlib'
+
+                // Add your description here
+                name 'jlib'
+                description 'jlib util'
+                url 'https://github.com/LukeMi/jcenter_upload'
+
+                // Set your license
+                licenses {
+                    license {
+                        name 'Apache-2.0'
+                        url ''
+                    }
+                }
+                developers {
+                    developer {
+                        id 'lukemi'
+                        name 'lukemi'
+                        email 'mingzhichen1990@gmail.com'
+                    }
+                }
+                scm {
+                    connection 'https://github.com/LukeMi/jcenter_upload'
+                    developerConnection 'https://github.com/LukeMi/jcenter_upload'
+                    url 'https://github.com/LukeMi/jcenter_upload'
+
+                }
+            }
+        }
+    }
+}
